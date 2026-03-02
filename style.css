@@ -124,38 +124,101 @@
 }
 
 @layer components {
-  /* Hero Styles */
-  .hero {
-    min-height: 100vh;
+  /* Marketplace Section */
+  .marketplace-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .marketplace-header h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .marketplace-header h2 span {
+    color: var(--primary-color);
+  }
+
+  .marketplace-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .col-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: radial-gradient(circle at 50% 50%, oklch(0.25 0.1 260 / 0.3) 0%, transparent 70%);
+    color: var(--text-main);
   }
 
-  .hero-title {
-    font-family: var(--font-heading);
-    font-size: clamp(3rem, 10vw, 6rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    letter-spacing: -0.04em;
+  .market-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
-  .hero-title span {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .market-item {
+    background: var(--surface);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: var(--transition);
   }
 
-  .hero-subtitle {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+  .market-item:hover {
+    border-color: var(--primary-color);
+    transform: translateX(10px);
+    background: oklch(0.2 0.02 260);
+  }
+
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+
+  .item-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  .item-meta {
+    font-size: 0.85rem;
     color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 3rem;
   }
 
+  .item-reward {
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  .item-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .tier-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+  }
+
+  .tier-master { color: #fbbf24; }
+  .tier-gold { color: #d1d5db; }
+  .tier-silver { color: #94a3b8; }
+
+  /* Hero Section updates */
   .hero-btns {
     display: flex;
     gap: 1.5rem;

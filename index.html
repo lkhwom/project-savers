@@ -3,85 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Savers | Turning Ideas into Reality</title>
+  <title>Project Savior | Software Capitalism Ecosystem</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
   <link href='/style.css' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="noise"></div>
   
-  <!-- Navigation bar for easier user interaction -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">Project <span>Savers</span></a>
+      <a href="#" class="logo"><i class="fa-solid fa-cube mr-2"></i>Project <span>Savior</span></a>
       <div class="nav-links">
         <a href="#vision">Vision</a>
-        <a href="#process">Process</a>
-        <a href="#contact" class="nav-cta">Get Started</a>
+        <a href="#marketplace">Marketplace</a>
+        <a href="#contact" class="nav-cta">Connect Wallet</a>
       </div>
     </div>
   </nav>
 
   <main>
-    <!-- Hero Section: Expressive and high-impact -->
     <header class="hero">
       <div class="hero-content">
-        <h1 class="hero-title">Your <span>Vision</span>,<br>Our <span>Execution</span>.</h1>
-        <p class="hero-subtitle">The community where non-developers turn great ideas into professional plans and successful products.</p>
+        <h1 class="hero-title">Own the <span>Vision</span>,<br>Outsource the <span>Work</span>.</h1>
+        <p class="hero-subtitle">Converting non-developer ideas into capitalist control through fragmented outsourcing and elite developer matching.</p>
         <div class="hero-btns">
-          <a href="#contact" class="btn primary">Start My Project</a>
-          <a href="#process" class="btn secondary">Learn How it Works</a>
+          <a href="#marketplace" class="btn primary">Browse Ideas</a>
+          <a href="#contact" class="btn secondary">Submit Your Idea</a>
         </div>
       </div>
     </header>
 
-    <!-- Vision Section: Explaining the core purpose -->
     <section id="vision" class="vision-section">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Our Mission</span>
-          <h2>Bridging the Gap</h2>
-          <p>We empower dreamers by providing the tools and community needed to refine raw ideas into professional-grade blueprints that developers love to build.</p>
+          <span class="badge">The Ecosystem</span>
+          <h2>The Capitalist Switch</h2>
+          <p>We empower visionaries by replacing technical helplessness with professional control. Ideas are refined into blueprints, fragmented into tasks, and executed by a global marketplace of elite developers.</p>
         </div>
       </div>
     </section>
 
-    <!-- Process Section: The 3 pillars with visual cards -->
-    <section id="process" class="process-section">
+    <!-- Refined Marketplace Section -->
+    <section id="marketplace" class="marketplace-section">
       <div class="container">
-        <div class="process-grid">
-          <div class="process-card" data-step="1">
-            <div class="card-icon">💡</div>
-            <h3>Ideation</h3>
-            <p>Collaborative brainstorming and community feedback to validate your vision and define its core value.</p>
+        <div class="marketplace-header">
+          <h2 class="section-title">Trending <span>Market</span></h2>
+          <p>Verified ideas and high-tier tasks currently active in the ecosystem.</p>
+        </div>
+        
+        <div class="marketplace-grid">
+          <!-- Ideas column -->
+          <div class="market-col">
+            <h3 class="col-title"><i class="fa-solid fa-fire mr-2"></i>Trending Ideas</h3>
+            <div id="idea-list" class="market-list">
+              <!-- JS rendered -->
+            </div>
           </div>
-          <div class="process-card" data-step="2">
-            <div class="card-icon">📋</div>
-            <h3>Blueprinting</h3>
-            <p>We transform your idea into a technical specification, ensuring everything is ready for development.</p>
-          </div>
-          <div class="process-card" data-step="3">
-            <div class="card-icon">🛠️</div>
-            <h3>Execution</h3>
-            <p>Access our marketplace of vetted developers to bring your refined plan to life with professional code.</p>
+          
+          <!-- Tasks column -->
+          <div class="market-col">
+            <h3 class="col-title"><i class="fa-solid fa-code mr-2"></i>Active Tasks</h3>
+            <div id="task-list" class="market-list">
+              <!-- JS rendered -->
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to Action & Inquiry Form: Modern and interactive -->
     <section id="contact" class="form-section">
       <div class="container">
         <div class="form-wrapper">
           <div class="form-info">
-            <h2>Ready to <span>Build?</span></h2>
-            <p>Tell us about your idea. Our team and community will help you through the next steps of your journey.</p>
+            <h2>Ready to <span>Rule?</span></h2>
+            <p>Your idea is your capital. Let our community handle the technical complexity while you retain strategic control.</p>
             <ul class="benefit-list">
-              <li><span>✔</span> Professional Technical Planning</li>
-              <li><span>✔</span> Vetted Developer Marketplace</li>
-              <li><span>✔</span> Strategic Partnership Options</li>
+              <li><span>✔</span> Fragmented Module Outsourcing</li>
+              <li><span>✔</span> Tier-based Developer Matching</li>
+              <li><span>✔</span> Professional Technical Blueprinting</li>
             </ul>
           </div>
           
@@ -101,20 +103,20 @@
                 <label for="project-type">Project Stage</label>
                 <select id="project-type" name="project-type" required>
                   <option value="" disabled selected>Select an option</option>
-                  <option value="raw-idea">Just a Raw Idea</option>
-                  <option value="planning">Initial Planning Done</option>
-                  <option value="ready-for-build">Ready for Development</option>
+                  <option value="raw-idea">Initial Vision</option>
+                  <option value="planning">Refining Blueprint</option>
+                  <option value="ready-for-build">Ready for Fragmentation</option>
                   <option value="other">Other</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="message">Tell us about your vision...</label>
-                <textarea id="message" name="message" rows="4" placeholder="Briefly describe what you want to create..." required></textarea>
+                <label for="message">Your Vision Brief</label>
+                <textarea id="message" name="message" rows="4" placeholder="Describe the outcome you want to own..." required></textarea>
               </div>
 
               <button type="submit" class="submit-btn">
-                <span>Submit My Vision</span>
+                <span>Deploy Vision</span>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -129,7 +131,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Project Savers Community & Marketplace. All rights reserved.</p>
+      <p>&copy; 2026 Project Savior Ecosystem. Facilitating the Exchange of Value.</p>
     </div>
   </footer>
 
