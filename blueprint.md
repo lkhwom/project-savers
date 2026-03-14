@@ -5,6 +5,7 @@ Project Savers is a community-driven marketplace designed to bridge the gap betw
 
 ## Application Details
 - **Tech Stack:** Vanilla HTML5, Modern CSS (Baseline), ES Modules (JavaScript).
+- **Analytics:** Google Analytics (gtag.js) for tracking user engagement and performance.
 - **Target Audience:**
     - **Visionaries (Non-developers):** People with ideas seeking professional planning and development.
     - **Architects/Planners:** Community members who help refine ideas into actionable blueprints.
