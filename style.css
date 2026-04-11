@@ -121,6 +121,11 @@
     border-radius: 0.75rem;
     box-shadow: 0 4px 15px var(--primary-glow);
   }
+
+  /* Fixed navbar height + modest gap (avoid large vw-driven padding on wide screens) */
+  .hero {
+    padding-top: clamp(5.25rem, 4.75rem + 1vw, 6rem);
+  }
 }
 
 @layer components {
