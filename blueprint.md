@@ -1,32 +1,30 @@
-# Project Savers - Blueprint
+# Project Savior - 블루프린트
 
-## Overview
-Project Savers is a community-driven marketplace designed to bridge the gap between non-developers with innovative ideas and the technical expertise required to build them. The platform facilitates the transformation of raw ideas into structured project plans through collaborative communication, eventually leading to high-quality execution by professional developers.
+## 개요
+Project Savior는 코딩을 몰라도 아이디어가 있는 사람들이 모여, 생각을 말하고 다듬는 **커뮤니티**예요. 나중에 그 멤버들을 위한 서비스(기획 도움, 개발 연결 등)를 붙이는 걸 목표로 합니다.
 
-## Application Details
-- **Tech Stack:** Vanilla HTML5, Modern CSS (Baseline), ES Modules (JavaScript).
-- **Analytics:** Google Analytics (gtag.js) for tracking user engagement and performance.
-- **Target Audience:**
-    - **Visionaries (Non-developers):** People with ideas seeking professional planning and development.
-    - **Architects/Planners:** Community members who help refine ideas into actionable blueprints.
-    - **Developers:** Professionals who execute the refined plans.
+## 기술·운영
+- **기술 스택:** HTML5, CSS, JavaScript (바닐라)
+- **분석:** Google Analytics (gtag.js)
+- **언어:** 한국어 기본 (브랜드명 Project Savior만 영문 유지)
 
-## Design Philosophy
-- **Professional yet Accessible:** A clean, high-tech aesthetic that feels welcoming to non-technical users.
-- **Vibrant & Energetic:** Using `oklch` for a modern, high-contrast palette (Deep Purples, Electric Blues, and Neon Accents).
-- **Structural Depth:** Multi-layered shadows and glassmorphism to emphasize the "building" nature of the platform.
-- **Interactive Flow:** Animated transitions that guide the user through the "Ideation -> Planning -> Execution" journey.
+## 대상
+- **아이디어 있는 비개발자:** AI 시대에 소외감을 느끼지만, 뭔가 만들고 싶은 사람
+- **같이 말해 줄 사람:** 피드백·정리를 도와주는 커뮤니티 멤버
+- **(추후) 개발자:** 아이디어가 어느 정도 정리된 뒤 실행 단계에서 연결
 
-## Features
-1. **Hero Experience:** High-impact introduction to the "Idea to Reality" pipeline.
-2. **The Process (Three Pillars):**
-    - **Ideate:** Structured brainstorming and community feedback.
-    - **Blueprint:** Professional planning and documentation.
-    - **Build:** Marketplace for hiring verified developers.
-3. **Interactive Inquiry:** The refined Formspree integration for initial onboarding.
-4. **Community Showcase:** A placeholder for successful project transformations.
+## 톤·디자인
+- 거창한 말·전문 용어 지양, 중학생도 이해할 쉬운 말
+- AI·코딩 격차에 공감하는 스토리텔링
+- 깔끔한 다크 UI, Noto Sans KR
 
-## Implementation Steps
-1. **Homepage Revamp:** Update `index.html` with sections for the Vision, the Process, and the Call to Action.
-2. **Visual Refresh:** Update `style.css` with a more sophisticated layout, including grid systems for process steps and enhanced typography.
-3. **Dynamic Interaction:** Update `main.js` to handle navigation, form submission, and scroll animations.
+## 홈페이지 기능
+1. **히어로:** AI 시대 소외감 → 같이 아이디어 말하는 모임
+2. **우리가 하는 일:** 왜 모이는지, 혼자보다 같이
+3. **아이디어 나눔:** 한국인 일상에 가까운 예시 주제 (가격 없음)
+4. **참여하기:** Formspree 문의 폼
+
+## 다음 단계 (참고)
+1. 배포 후 오픈채팅·디스코드 등 실제 모임 공간 연결
+2. 트렌딩 아이디어를 회원이 올린 내용으로 교체
+3. 커뮤니티가 커지면 서비스 기능 검토

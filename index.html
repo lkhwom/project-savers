@@ -1,34 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Savior | Software Capitalism Ecosystem</title>
-  <!-- Google tag (gtag.js) -->
+  <title>Project Savior | 비개발자 아이디어 모임</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJGDKXDVKW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-KJGDKXDVKW');
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href='/style.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="noise"></div>
-  
+
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="logo"><i class="fa-solid fa-cube mr-2"></i>Project <span>Savior</span></a>
       <div class="nav-links">
-        <a href="#vision">Vision</a>
-        <a href="#marketplace">Marketplace</a>
-        <a href="#contact" class="nav-cta">Connect Wallet</a>
+        <a href="#vision">우리가 하는 일</a>
+        <a href="#marketplace">아이디어 나눔</a>
+        <a href="#contact" class="nav-cta">참여하기</a>
       </div>
     </div>
   </nav>
@@ -36,11 +34,14 @@
   <main>
     <header class="hero">
       <div class="hero-content">
-        <h1 class="hero-title">Own the <span>Vision</span>,<br>Outsource the <span>Work</span>.</h1>
-        <p class="hero-subtitle">Converting non-developer ideas into capitalist control through fragmented outsourcing and elite developer matching.</p>
+        <h1 class="hero-title"><span>AI 잘 쓰는 사람만</span> 앞서 가는 것 같죠?</h1>
+        <p class="hero-subtitle">
+          <span class="hero-subtitle-line">뉴스·유튜브엔 “AI로 돈 번다”는 말만 넘쳐요. 그런데 나는 코딩도 못하고, 뭘 어떻게 해야 할지 모르겠다면—</span>
+          <span class="hero-subtitle-line">당신만 그런 게 아니에요. Project Savior는 그런 사람들끼리 아이디어부터 말하고, 해내는 모임이에요.</span>
+        </p>
         <div class="hero-btns">
-          <a href="#marketplace" class="btn primary">Browse Ideas</a>
-          <a href="#contact" class="btn secondary">Submit Your Idea</a>
+          <a href="#marketplace" class="btn primary">지금 올라온 아이디어</a>
+          <a href="#contact" class="btn secondary">내 아이디어 올리기</a>
         </div>
       </div>
     </header>
@@ -48,36 +49,25 @@
     <section id="vision" class="vision-section">
       <div class="container">
         <div class="section-header">
-          <span class="badge">The Ecosystem</span>
-          <h2>The Capitalist Switch</h2>
-          <p>We empower visionaries by replacing technical helplessness with professional control. Ideas are refined into blueprints, fragmented into tasks, and executed by a global marketplace of elite developers.</p>
+          <span class="badge">왜 모여야 할까요?</span>
+          <h2>혼자 끙끙대면 끝이 안 보여요</h2>
+          <p>우리는 앱 만드는 전문가가 아니에요. 대신 “이거 있으면 좋겠다”는 생각은 자주 해요.</p>
+          <p>여기서는 그 말을 짧게 적고, 비슷한 사람한테 들어 보고, 다음에 뭘 할지 같이 정해요. 완벽할 필요 없어요.</p>
         </div>
       </div>
     </section>
 
-    <!-- Refined Marketplace Section -->
     <section id="marketplace" class="marketplace-section">
       <div class="container">
         <div class="marketplace-header">
-          <h2 class="section-title">Trending <span>Market</span></h2>
-          <p>Verified ideas and high-tier tasks currently active in the ecosystem.</p>
+          <h2 class="section-title">지금 <span>생각 나는</span> 아이디어</h2>
+          <p>이런 생각들을 같이 나눠요. “나도 그런데!” 싶으면 참여하기에서 말해 보세요.</p>
         </div>
-        
-        <div class="marketplace-grid">
-          <!-- Ideas column -->
+
+        <div class="marketplace-grid marketplace-grid--ideas">
           <div class="market-col">
-            <h3 class="col-title"><i class="fa-solid fa-fire mr-2"></i>Trending Ideas</h3>
-            <div id="idea-list" class="market-list">
-              <!-- JS rendered -->
-            </div>
-          </div>
-          
-          <!-- Tasks column -->
-          <div class="market-col">
-            <h3 class="col-title"><i class="fa-solid fa-code mr-2"></i>Active Tasks</h3>
-            <div id="task-list" class="market-list">
-              <!-- JS rendered -->
-            </div>
+            <h3 class="col-title"><i class="fa-solid fa-fire mr-2"></i>요즘 많이 나오는 주제</h3>
+            <div id="idea-list" class="market-list"></div>
           </div>
         </div>
       </div>
@@ -87,45 +77,41 @@
       <div class="container">
         <div class="form-wrapper">
           <div class="form-info">
-            <h2>Ready to <span>Rule?</span></h2>
-            <p>Your idea is your capital. Let our community handle the technical complexity while you retain strategic control.</p>
+            <h2>같이 <span>시작해요</span></h2>
+            <p>아이디어가 완벽할 필요 없어요. 두세 줄만 써도 됩니다. 부담 갖지 말고 보내 주세요.</p>
             <ul class="benefit-list">
-              <li><span>✔</span> Fragmented Module Outsourcing</li>
-              <li><span>✔</span> Tier-based Developer Matching</li>
-              <li><span>✔</span> Professional Technical Blueprinting</li>
+              <li><span>✔</span> 코딩 몰라도 괜찮아요</li>
+              <li><span>✔</span> 비슷한 고민 가진 사람들이 봐 줘요</li>
+              <li><span>✔</span> 다음에 뭘 할지 같이 정리해요</li>
             </ul>
           </div>
-          
+
           <div class="form-card">
             <form id="partnership-form" action="https://formspree.io/f/xeelwyjq" method="POST">
               <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="John Doe" required />
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" placeholder="홍길동" required />
               </div>
-
               <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" placeholder="hello@example.com" required />
               </div>
-
               <div class="form-group">
-                <label for="project-type">Project Stage</label>
+                <label for="project-type">아이디어 단계</label>
                 <select id="project-type" name="project-type" required>
-                  <option value="" disabled selected>Select an option</option>
-                  <option value="raw-idea">Initial Vision</option>
-                  <option value="planning">Refining Blueprint</option>
-                  <option value="ready-for-build">Ready for Fragmentation</option>
-                  <option value="other">Other</option>
+                  <option value="" disabled selected>골라 주세요</option>
+                  <option value="raw-idea">막 떠올랐어요</option>
+                  <option value="planning">조금 정리했어요</option>
+                  <option value="ready-for-build">이제 뭘 할지 알고 싶어요</option>
+                  <option value="other">기타</option>
                 </select>
               </div>
-
               <div class="form-group">
-                <label for="message">Your Vision Brief</label>
-                <textarea id="message" name="message" rows="4" placeholder="Describe the outcome you want to own..." required></textarea>
+                <label for="message">아이디어 한 줄 소개</label>
+                <textarea id="message" name="message" rows="4" placeholder="예: 넷플릭스 무료 체험 끝나기 전에 알려 주는 앱 있으면 좋겠어요." required></textarea>
               </div>
-
               <button type="submit" class="submit-btn">
-                <span>Deploy Vision</span>
+                <span>보내기</span>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -140,10 +126,10 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Project Savior Ecosystem. Facilitating the Exchange of Value.</p>
+      <p>&copy; 2026 Project Savior. 코딩 몰라도 아이디어 있는 사람들을 위한 모임.</p>
     </div>
   </footer>
 
-  <script defer type="text/javascript" src="/main.js"></script>
+  <script defer src="main.js"></script>
 </body>
 </html>

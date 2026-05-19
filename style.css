@@ -15,8 +15,8 @@
     --card-bg: oklch(1 0 0 / 0.05);
     --card-border: oklch(1 0 0 / 0.1);
     
-    --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Outfit', sans-serif;
+    --font-heading: 'Noto Sans KR', sans-serif;
+    --font-body: 'Noto Sans KR', sans-serif;
     
     --radius: 1.5rem;
     --shadow-deep: 0 20px 60px -15px oklch(0 0 0 / 0.5);
@@ -151,6 +151,34 @@
     gap: 3rem;
   }
 
+  .marketplace-grid--ideas {
+    grid-template-columns: 1fr;
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  .vision-section {
+    padding-bottom: 2.5rem;
+  }
+
+  .vision-section .section-header {
+    margin-bottom: 0;
+  }
+
+  .marketplace-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .marketplace-section .marketplace-header {
+    margin-bottom: 2rem;
+  }
+
+  .form-section {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+  }
+
   .col-title {
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -166,6 +194,12 @@
     gap: 1.5rem;
   }
 
+  #idea-list.market-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
   .market-item {
     background: var(--surface);
     border: 1px solid var(--card-border);
@@ -176,8 +210,48 @@
 
   .market-item:hover {
     border-color: var(--primary-color);
-    transform: translateX(10px);
+    transform: translateY(-4px);
     background: oklch(0.2 0.02 260);
+  }
+
+  .hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-title span {
+    color: var(--primary-color);
+  }
+
+  .hero-subtitle {
+    width: 100%;
+    max-width: min(56rem, 94vw);
+    margin-inline: auto;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: clamp(0.95rem, 1.6vw, 1.125rem);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    word-break: keep-all;
+  }
+
+  .hero-subtitle-line {
+    display: block;
+  }
+
+  .hero-subtitle-line + .hero-subtitle-line {
+    margin-top: 0.4em;
+  }
+
+  .hero-content {
+    text-align: center;
+    width: 100%;
+    max-width: min(56rem, 94vw);
+    margin-inline: auto;
+    padding-inline: 1rem;
   }
 
   .item-header {
@@ -457,5 +531,22 @@
   }
   section {
     padding: 4rem 0;
+  }
+  .vision-section {
+    padding-bottom: 1.5rem;
+  }
+  .marketplace-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .form-section {
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #idea-list.market-list {
+    grid-template-columns: 1fr;
   }
 }
