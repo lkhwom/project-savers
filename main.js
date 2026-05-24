@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const status = document.getElementById('form-status');
   const navbar = document.querySelector('.navbar');
 
-  // Navbar scroll effect
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
@@ -12,21 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Smooth scroll for nav links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      target.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
   async function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
-    
-    // UI state: Loading
+
     const submitBtn = form.querySelector('.submit-btn');
     const originalBtnText = submitBtn.innerHTML;
     submitBtn.disabled = true;
@@ -60,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalBtnText;
-      
+
       setTimeout(() => {
         status.classList.remove('show');
       }, 6000);
