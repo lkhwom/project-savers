@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Savior 카페</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-78MKML7D49"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-78MKML7D49');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="community.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="cafe-body">
+  <nav class="navbar cafe-nav">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> Project <span>Savior</span></a>
+      <div class="nav-links">
+        <a href="index.html">홈</a>
+        <a href="index.html#contact">참여하기</a>
+        <a href="community.html" class="nav-cta nav-active">커뮤니티</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="cafe-banner">
+    <div class="cafe-banner__inner">
+      <div class="cafe-banner__info">
+        <h1 class="cafe-banner__title"><i class="fa-solid fa-mug-hot"></i> Project Savior 카페</h1>
+        <p class="cafe-banner__meta">아이디어 있는 비개발자들의 수다방 · <span id="stat-posts">0</span>개 글</p>
+      </div>
+      <button type="button" id="btn-open-write" class="cafe-write-btn">
+        <i class="fa-solid fa-pen"></i> 글쓰기
+      </button>
+    </div>
+  </header>
+
+  <div class="cafe-layout">
+    <aside class="cafe-sidebar">
+      <div class="sidebar-block">
+        <h2 class="sidebar-title">게시판</h2>
+        <nav class="board-nav" id="board-nav">
+          <button type="button" class="board-nav__item is-active" data-category="all">전체글</button>
+          <button type="button" class="board-nav__item" data-category="idea">💡 아이디어 공유</button>
+          <button type="button" class="board-nav__item" data-category="talk">💬 자유 수다</button>
+          <button type="button" class="board-nav__item" data-category="question">❓ 질문·피드백</button>
+        </nav>
+      </div>
+      <div class="sidebar-block sidebar-notice">
+        <h2 class="sidebar-title">카페 공지</h2>
+        <p>욕설·개인정보는 올리지 말아 주세요. 아이디어는 짧게 적어도 OK!</p>
+        <a href="index.html#contact" class="sidebar-link">처음이면 참여 신청 →</a>
+      </div>
+    </aside>
+
+    <main class="cafe-main">
+      <!-- 목록 화면 -->
+      <section id="view-list" class="cafe-view">
+        <div class="cafe-toolbar">
+          <h2 id="board-title" class="cafe-toolbar__title">전체글</h2>
+          <div class="cafe-toolbar__sort">
+            <button type="button" class="sort-btn is-active" data-sort="latest">최신순</button>
+            <button type="button" class="sort-btn" data-sort="popular">인기순</button>
+          </div>
+        </div>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th class="col-board">말머리</th>
+                <th class="col-title">제목</th>
+                <th class="col-author">글쓴이</th>
+                <th class="col-date">날짜</th>
+                <th class="col-stats">반응</th>
+              </tr>
+            </thead>
+            <tbody id="post-table-body"></tbody>
+          </table>
+          <p id="post-empty" class="post-empty" hidden>아직 글이 없어요. 첫 글을 올려 보세요!</p>
+        </div>
+      </section>
+
+      <!-- 글 상세 화면 -->
+      <section id="view-detail" class="cafe-view" hidden>
+        <button type="button" id="btn-back-list" class="back-btn"><i class="fa-solid fa-arrow-left"></i> 목록으로</button>
+        <article class="post-detail">
+          <div class="post-detail__head">
+            <span id="detail-board" class="post-badge"></span>
+            <h2 id="detail-title" class="post-detail__title"></h2>
+            <div class="post-detail__meta">
+              <span id="detail-author"></span>
+              <span id="detail-date"></span>
+              <span id="detail-cheers"></span>
+            </div>
+          </div>
+          <div id="detail-body" class="post-detail__body"></div>
+          <div class="post-detail__actions">
+            <button type="button" id="btn-detail-cheer" class="cheer-btn">👍 나도 그런데!</button>
+            <button type="button" id="btn-detail-delete" class="delete-btn" hidden>삭제</button>
+          </div>
+        </article>
+
+        <section class="comment-section">
+          <h3 class="comment-section__title">댓글 <span id="comment-count">0</span></h3>
+          <ul id="comment-list" class="comment-list"></ul>
+          <form id="comment-form" class="comment-form">
+            <input type="text" id="comment-nickname" placeholder="닉네임" maxlength="20" required />
+            <textarea id="comment-body" placeholder="의견을 남겨 보세요." rows="2" maxlength="500" required></textarea>
+            <button type="submit" class="comment-submit">댓글 등록</button>
+          </form>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <!-- 글쓰기 모달 -->
+  <div id="write-modal" class="modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="dialog" aria-labelledby="modal-title">
+      <div class="modal__header">
+        <h2 id="modal-title">글쓰기</h2>
+        <button type="button" class="modal__close" data-close-modal aria-label="닫기">&times;</button>
+      </div>
+      <form id="post-form" class="modal__form">
+        <div class="form-group">
+          <label for="post-category">게시판</label>
+          <select id="post-category" name="category" required>
+            <option value="idea">💡 아이디어 공유</option>
+            <option value="talk">💬 자유 수다</option>
+            <option value="question">❓ 질문·피드백</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="post-nickname">닉네임</label>
+          <input type="text" id="post-nickname" name="nickname" placeholder="별명" required maxlength="20" />
+        </div>
+        <div class="form-group">
+          <label for="post-title">제목</label>
+          <input type="text" id="post-title" name="title" placeholder="제목을 입력하세요" required maxlength="80" />
+        </div>
+        <div class="form-group">
+          <label for="post-body">내용</label>
+          <textarea id="post-body" name="body" rows="8" placeholder="생각을 자유롭게 적어 주세요." required maxlength="2000"></textarea>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn secondary" data-close-modal>취소</button>
+          <button type="submit" class="btn primary">등록</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script defer src="community.js"></script>
+</body>
+</html>

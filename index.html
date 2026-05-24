@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Savior | 비개발자 아이디어 모임</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJGDKXDVKW"></script>
+  <title>Project Savers | 비개발자 아이디어 모임</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-78MKML7D49"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-KJGDKXDVKW');
+
+    gtag('config', 'G-78MKML7D49');
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,11 +24,11 @@
 
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo"><i class="fa-solid fa-cube mr-2"></i>Project <span>Savior</span></a>
+      <a href="index.html" class="logo"><i class="fa-solid fa-cube mr-2"></i>Project <span>Savior</span></a>
       <div class="nav-links">
         <a href="#vision">우리가 하는 일</a>
-        <a href="#marketplace">아이디어 나눔</a>
-        <a href="#contact" class="nav-cta">참여하기</a>
+        <a href="#contact">참여하기</a>
+        <a href="community.html" class="nav-cta">커뮤니티</a>
       </div>
     </div>
   </nav>
@@ -40,8 +42,8 @@
           <span class="hero-subtitle-line">당신만 그런 게 아니에요. Project Savior는 그런 사람들끼리 아이디어부터 말하고, 해내는 모임이에요.</span>
         </p>
         <div class="hero-btns">
-          <a href="#marketplace" class="btn primary">지금 올라온 아이디어</a>
-          <a href="#contact" class="btn secondary">내 아이디어 올리기</a>
+          <a href="community.html" class="btn primary">커뮤니티 가기</a>
+          <a href="#marketplace" class="btn secondary">예시 아이디어 보기</a>
         </div>
       </div>
     </header>
@@ -57,21 +59,8 @@
       </div>
     </section>
 
-    <section id="marketplace" class="marketplace-section">
-      <div class="container">
-        <div class="marketplace-header">
-          <h2 class="section-title">지금 <span>생각 나는</span> 아이디어</h2>
-          <p>이런 생각들을 같이 나눠요. “나도 그런데!” 싶으면 참여하기에서 말해 보세요.</p>
-        </div>
-
-        <div class="marketplace-grid marketplace-grid--ideas">
-          <div class="market-col">
-            <h3 class="col-title"><i class="fa-solid fa-fire mr-2"></i>요즘 많이 나오는 주제</h3>
-            <div id="idea-list" class="market-list"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- 아이디어 카드 구역: IdeaGrid.html 에서 조립 (이 영역은 직접 수정하지 마세요) -->
+    <div id="idea-grid-mount"></div>
 
     <section id="contact" class="form-section">
       <div class="container">
@@ -126,10 +115,11 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Project Savior. 코딩 몰라도 아이디어 있는 사람들을 위한 모임.</p>
+      <p>&copy; 2026 Project Savior. 코딩 몰라도 아이디어 있는 사람들을 위한 모임. · <a href="community.html">커뮤니티</a></p>
     </div>
   </footer>
 
+  <script defer src="idea-grid-loader.js"></script>
   <script defer src="main.js"></script>
 </body>
 </html>

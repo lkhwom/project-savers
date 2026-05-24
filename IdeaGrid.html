@@ -1,0 +1,175 @@
+<!--
+  ═══════════════════════════════════════════════════════════════
+  IdeaGrid — 아이디어 카드 구역 (이 파일만 수정하세요)
+  ═══════════════════════════════════════════════════════════════
+  · 카드 제목, 설명, 태그(meta) 글자 → 아래 HTML에서 바꾸면 됩니다.
+  · 카드 개수 추가/삭제 → .idea-card 블록을 복사하거나 지우세요.
+  · 색·간격·레이아웃 → 아래 <style> 블록만 고치면 됩니다.
+  · index.html, main.js, style.css 는 건드리지 마세요.
+  ═══════════════════════════════════════════════════════════════
+-->
+
+<style>
+  /* ── IdeaGrid 전용 스타일 (다른 페이지 영역과 분리) ── */
+
+  .idea-grid-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .idea-grid-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .idea-grid-header h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .idea-grid-header h2 span {
+    color: var(--primary-color);
+  }
+
+  .idea-grid-header p {
+    color: var(--text-muted);
+  }
+
+  .idea-grid-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .idea-grid-col-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-main);
+  }
+
+  .idea-grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .idea-card {
+    background: var(--surface);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: var(--transition);
+  }
+
+  .idea-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+    background: oklch(0.2 0.02 260);
+  }
+
+  .idea-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+
+  .idea-card__title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  .idea-card__desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .idea-card__meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 968px) {
+    .idea-grid-section {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .idea-grid-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<section id="marketplace" class="idea-grid-section">
+  <div class="container">
+    <div class="idea-grid-header">
+      <h2 class="section-title">지금 <span>생각 나는</span> 아이디어</h2>
+      <p>이런 생각들을 같이 나눠요. “나도 그런데!” 싶으면 참여하기에서 말해 보세요.</p>
+    </div>
+
+    <div class="idea-grid-wrap">
+      <div class="idea-grid-col">
+        <h3 class="idea-grid-col-title"><i class="fa-solid fa-fire mr-2"></i>요즘 많이 나오는 주제</h3>
+        <div class="idea-grid-list">
+
+          <article class="idea-card">
+            <div class="idea-card__header">
+              <span class="idea-card__title">무료 체험 취소 알리미</span>
+            </div>
+            <p class="idea-card__desc">넷플릭스, 쿠팡 와우 무료 체험 끝나기 딱 하루 전! 내 계좌에서 돈 빠져나가는 걸 막아 주는 생명의 알림.</p>
+            <span class="idea-card__meta">구독 · 돈</span>
+          </article>
+
+          <article class="idea-card">
+            <div class="idea-card__header">
+              <span class="idea-card__title">옷차림 기억장치</span>
+            </div>
+            <p class="idea-card__desc">“쟤 만날 때 뭐 입었지?” “너 저번에도 그거 입지 않았어?” 고민하기 싫을 때. 친구별로 마지막에 만났을 때 입었던 옷을 적어 두는 메모.</p>
+            <span class="idea-card__meta">일상 · 취향</span>
+          </article>
+
+          <article class="idea-card">
+            <div class="idea-card__header">
+              <span class="idea-card__title">회식 탈출 도우미</span>
+            </div>
+            <p class="idea-card__desc">숨 막히는 술자리에 타이머만 맞춰 두면, 10분 뒤 “어머니로부터 긴급 전화”가 울려서 자연스럽게 나올 각을 만들어 줌.</p>
+            <span class="idea-card__meta">모임 · 유머</span>
+          </article>
+
+          <article class="idea-card">
+            <div class="idea-card__header">
+              <span class="idea-card__title">월세·관리비 납부일 알림</span>
+            </div>
+            <p class="idea-card__desc">매달 같은 날인데 자꾸 까먹을 때, 미리 하루 전에 알려 주는 간단한 알림.</p>
+            <span class="idea-card__meta">생활 · 돈</span>
+          </article>
+
+          <article class="idea-card">
+            <div class="idea-card__header">
+              <span class="idea-card__title">부모님 병원·약 먹는 시간 공유</span>
+            </div>
+            <p class="idea-card__desc">형제가 돌아가며 챙기는데, 누가 언제 데려갔는지, 무엇을 유의하는지 가족끼리만 공유하는 메모.</p>
+            <span class="idea-card__meta">가족 · 건강</span>
+          </article>
+
+          <article class="idea-card">
+            <div class="idea-card__header">
+              <span class="idea-card__title">이번 달 뭐 샀지 자동 정리</span>
+            </div>
+            <p class="idea-card__desc">쿠팡·배민·카드 문자가 쏟아질 때, 이번 달에 쓴 돈과 뭘 샀는지 한곳에 모아 보여 주는 앱.</p>
+            <span class="idea-card__meta">쇼핑 · 가계</span>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

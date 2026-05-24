@@ -114,6 +114,22 @@
     color: var(--primary-color);
   }
 
+  .footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--card-border);
+    text-align: center;
+    color: var(--text-muted);
+  }
+
+  .footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
   .nav-cta {
     background: var(--primary-color);
     color: white !important;
@@ -129,34 +145,6 @@
 }
 
 @layer components {
-  /* Marketplace Section */
-  .marketplace-header {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .marketplace-header h2 {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .marketplace-header h2 span {
-    color: var(--primary-color);
-  }
-
-  .marketplace-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-
-  .marketplace-grid--ideas {
-    grid-template-columns: 1fr;
-    max-width: none;
-    margin-inline: 0;
-  }
-
   .vision-section {
     padding-bottom: 2.5rem;
   }
@@ -165,53 +153,9 @@
     margin-bottom: 0;
   }
 
-  .marketplace-section {
-    padding-top: 2.5rem;
-    padding-bottom: 2rem;
-  }
-
-  .marketplace-section .marketplace-header {
-    margin-bottom: 2rem;
-  }
-
   .form-section {
     padding-top: 2rem;
     padding-bottom: 6rem;
-  }
-
-  .col-title {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    color: var(--text-main);
-  }
-
-  .market-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  #idea-list.market-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-  }
-
-  .market-item {
-    background: var(--surface);
-    border: 1px solid var(--card-border);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    transition: var(--transition);
-  }
-
-  .market-item:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-4px);
-    background: oklch(0.2 0.02 260);
   }
 
   .hero-title {
@@ -252,35 +196,6 @@
     max-width: min(56rem, 94vw);
     margin-inline: auto;
     padding-inline: 1rem;
-  }
-
-  .item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 0.75rem;
-  }
-
-  .item-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: white;
-  }
-
-  .item-meta {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-  }
-
-  .item-reward {
-    color: var(--accent-color);
-    font-weight: 700;
-  }
-
-  .item-desc {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-bottom: 1rem;
   }
 
   .tier-badge {
@@ -535,18 +450,9 @@
   .vision-section {
     padding-bottom: 1.5rem;
   }
-  .marketplace-section {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
   .form-section {
     padding-top: 1.5rem;
     padding-bottom: 4rem;
   }
 }
 
-@media (max-width: 640px) {
-  #idea-list.market-list {
-    grid-template-columns: 1fr;
-  }
-}
